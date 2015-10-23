@@ -26,13 +26,19 @@ int main(void)
 //	d = d * a + 1.987654321;
 
 	configurePin(GPIO_OUTPUT, GPIO_PIN_13, GPIOG);
+//	configurePin(GPIO_OUTPUT, GPIO_PIN_14, GPIOG);
+//	configurePin(GPIO_OUTPUT, GPIO_PIN_13, GPIOB);
 
     while(1)
     {
     	delay(200000);
     	writeOne(GPIO_PIN_13, GPIOG);
+    	writeOne(GPIO_PIN_14, GPIOG);
+    	writeOne(GPIO_PIN_13, GPIOB);
     	delay(200000);
     	writeZero(GPIO_PIN_13, GPIOG);
+    	writeZero(GPIO_PIN_14, GPIOG);
+    	writeZero(GPIO_PIN_13, GPIOB);
     }
 //    	turnOnLED(PORTG, LED3);
 //    	turnOffLED(PORTG, LED3);
